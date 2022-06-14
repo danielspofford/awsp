@@ -1,0 +1,5 @@
+#! /bin/sh
+
+aws_profile=$(aws configure list-profiles | fzf);
+export AWS_PROFILE=$aws_profile
+echo "AWS_PROFILE was set to $aws_profile"
